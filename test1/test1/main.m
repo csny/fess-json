@@ -1,6 +1,6 @@
 //
 //  main.m
-//  json1
+//  test1
 //
 //  Created by macbook on 2015/02/28.
 //  Copyright (c) 2015年 macbook. All rights reserved.
