@@ -34,7 +34,7 @@ void searchresultlist()
     // JSONの配列を整理しないでそのまま表示
     //NSLog(@"json全文：%@", array);
     
-    // JSONの配列からtitle,url,lastmodifiedを抽出して出力
+    // JSONの配列からi番目のtitle,url,lastmodifiedを抽出して出力
     // 階層（入れ子）構造になっていれば"."で区切って、全階層を記述する
     // FESSのデフォルトは20件ずつ表示なので、定数で入れちゃった
     for (int i=0;i<20;i++){
