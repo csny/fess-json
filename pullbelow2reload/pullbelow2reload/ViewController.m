@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+// 下に引っ張ると更新する機能。以下の記事のパクり
+// http://qiita.com/yu_0105/items/493fc60fecdabb41e4c2
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
