@@ -43,6 +43,7 @@ void getfessjson_pt1()
     // パターン1 (NSArray-valueForKeyPath)
     // JSONの配列からi番目のtitle,url,lastmodifiedを抽出して出力
     // 階層（入れ子）構造になっていれば"."で区切って、全階層を記述する
+    // １まとまりずつ出力したいため、objectAtIndex:iというのを入れている
     for (int i=0;i<cnt;i++){
         NSLog(@"ファイル名：%@　URL：%@　最終更新：%@", [[array valueForKeyPath:@"response.result.title"] objectAtIndex:i], [[array valueForKeyPath:@"response.result.url"] objectAtIndex:i], [[array valueForKeyPath:@"response.result.lastModified"] objectAtIndex:i]);
     }
