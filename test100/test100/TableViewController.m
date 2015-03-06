@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 
 @interface TableViewController ()
-// itemsは手入力
+// property*itemsは手入力、ストーリーボードとのひもづけなし
 @property (nonatomic, strong) NSArray *items;
 @end
 
