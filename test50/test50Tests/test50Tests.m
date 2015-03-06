@@ -1,19 +1,19 @@
 //
-//  test88Tests.m
-//  test88Tests
+//  test50Tests.m
+//  test50Tests
 //
-//  Created by macbook on 2015/03/05.
+//  Created by macbook on 2015/03/06.
 //  Copyright (c) 2015年 macbook. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface test88Tests : XCTestCase
+@interface test50Tests : XCTestCase
 
 @end
 
-@implementation test88Tests
+@implementation test50Tests
 
 - (void)setUp {
     [super setUp];
