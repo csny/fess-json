@@ -57,9 +57,8 @@
     //[self.view endEditing:YES];
 }
 // キーボード外のシングルタップで閉じる
-- (IBAction)didSingleTap:(UITapGestureRecognizer *)sender {
+- (IBAction)singleTapped:(id)sender {
     [self.view endEditing:YES];
-    NSLog(@"TV tapped");
 }
 
 @end

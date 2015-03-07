@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="fVx-5K-UYp" detailTextLabel="7HZ-Cv-EYs" style="IBUITableViewCellStyleSubtitle" id="C3U-Gy-yMV">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -37,6 +38,7 @@
                         <connections>
                             <outlet property="dataSource" destination="LfQ-u7-gJt" id="HeJ-M7-UG8"/>
                             <outlet property="delegate" destination="LfQ-u7-gJt" id="Apd-uj-zGh"/>
+                            <outletCollection property="gestureRecognizers" destination="d5g-Bo-wEL" appends="YES" id="K3T-f0-Qtx"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="t8j-aD-Qkb">
@@ -63,9 +65,9 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ful-Jd-UXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="C4F-u4-44F">
+                <tapGestureRecognizer id="d5g-Bo-wEL">
                     <connections>
-                        <action selector="didSingleTap:" destination="LfQ-u7-gJt" id="hrd-XK-l25"/>
+                        <action selector="singleTapped:" destination="LfQ-u7-gJt" id="IsH-kB-jlW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -108,15 +110,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OJt-UK-Snb" appends="YES" id="AE6-Kz-YDU"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addressField" destination="Rg3-KC-Jpl" id="rgY-Rf-Awb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gr4-ij-6cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="TJV-dh-JQs">
+                <tapGestureRecognizer id="OJt-UK-Snb">
                     <connections>
-                        <action selector="didSingleTap:" destination="1pD-K8-gSa" id="fMa-85-myQ"/>
+                        <action selector="singleTapped:" destination="1pD-K8-gSa" id="FTu-Tc-zrX"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

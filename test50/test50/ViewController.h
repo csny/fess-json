@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressField;
 - (IBAction)saveBtn:(id)sender;
 - (IBAction)didEnd:(id)sender;
-- (IBAction)didSingleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)singleTapped:(id)sender;
 
 @end

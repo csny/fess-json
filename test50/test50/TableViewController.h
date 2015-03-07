@@ -16,6 +16,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 - (IBAction)didEnd:(id)sender;
-- (IBAction)didSingleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)singleTapped:(id)sender;
 
 @end
