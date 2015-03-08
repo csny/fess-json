@@ -8,6 +8,8 @@ test50:　　アプリの全容を掴むための画面の作成と画面間の�
 
 test100:　　取得したJSONをtableviewに入れ込むテスト
 
+test150:　　NSURLsessionとAlertView、エラー処理のテスト
+
 2.動作条件
 
 Objective-Cで書かれています。xcode6.1.1で動作確認済み。
