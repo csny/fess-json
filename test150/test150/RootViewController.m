@@ -65,7 +65,7 @@
 {
     NSString *searchword = @"txt";
     // 元のURL
-    NSString *orign = @"http://192.168.1.100/fess/json?query=";
+    NSString *orign = @"http://www.orenchi.local/fess/json?query=";
     // ttp://サーバアドレス/fess/json?query=検索語となるように生成
     NSString *url = [NSString stringWithFormat:@"%@%@",orign,searchword];
     
@@ -82,6 +82,7 @@
         // 通信が異常終了したときの処理
         NSLog(@"request failed.");
         NSLog(@"ERROR:%@",error);
+        NSLog(@"HTTPstatus:%@",response);
         // アラートを出して処理中断
         [self showAlert:@"Check network environment"];
         return;
@@ -121,19 +122,22 @@
     // NSURLSession の作成
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.10/fess/json?query=txt"];
+    NSURL *url = [NSURL URLWithString:@"http://www.orenchi.local/fess/json?query=txt"];
     // Requestの条件設定、キャッシュを使い、タイムアウトは7秒
     NSURLRequest *request = [NSURLRequest requestWithURL:url
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
                                          timeoutInterval:7.0];
     
     // NSURLSessionDownloadTask の作成
+    // responseはHTTPステータスコードが、
+    // errorは、エラーコードや理由が入って帰ってくる。中身見た方が早い。
     NSURLSessionTask *task = [session dataTaskWithRequest:request
                                         completionHandler:^(NSData *json, NSURLResponse *response, NSError *error) {
                                             if (json==nil || (error)) {
                                                 // 通信が異常終了したときの処理
                                                 NSLog(@"request failed.");
                                                 NSLog(@"ERROR:%@",error);
+                                                NSLog(@"HTTPstatus:%@",response);
                                                 // アラートを出して処理中断
                                                 [self showAlert:@"Check network environment"];
                                                 return;
