@@ -9,18 +9,15 @@
 #import "TableViewController.h"
 
 @interface TableViewController ()
-// property*itemsは手入力、ストーリーボードとのひもづけなし
-@property (nonatomic, strong) NSArray *items;
+
 @end
 
 @implementation TableViewController
-// itemsへのsynthesize
-@synthesize items;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 空の配列を用意
-    self.items = [NSArray array];
+    _items = [NSArray array];
     [self getJSON];
     //NSLog(@"viewDidLoad called");
 }
@@ -52,7 +49,7 @@
     // NSDictionaryにセットされた値からまずresponseを取り出してtemp_arrayに再セット
     temp_array = [temp_array objectForKey:@"response"];
     // アプリデータの配列をプロパティに保持
-    self.items = [temp_array objectForKey:@"result"];
+    _items = [temp_array objectForKey:@"result"];
     
     // TableView をリロード、ストーリーボードと名前を合わせる
     [self.tableView reloadData];
@@ -62,8 +59,8 @@
 // セル数を返す(tableview必須メソッド)
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //NSLog(@"cell数:%ld",[items count]);
-    return [items count];
+    //NSLog(@"cell数:%ld",[_items count]);
+    return [_items count];
     //NSLog(@"numberOfSectionsInTableView called");
 }
 
@@ -81,7 +78,7 @@
     }
     
     // indexPath.rowの値をインデックスに、1グループずつJSON情報をitemに格納
-    NSDictionary *item = [items objectAtIndex:indexPath.row];
+    NSDictionary *item = [_items objectAtIndex:indexPath.row];
     // セルにタイトルとサブタイトルを表示
     cell.textLabel.text = [item objectForKey:@"title"];
     cell.detailTextLabel.text=[item objectForKey:@"url"];

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UITableViewController
+// property*itemsは手入力、ストーリーボードとのひもづけなし
+@property NSArray *items;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
